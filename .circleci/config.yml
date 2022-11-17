@@ -34,3 +34,6 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+  codecov-workflow:
+    jobs:
+      - codecov-job
