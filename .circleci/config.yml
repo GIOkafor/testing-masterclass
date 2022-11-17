@@ -16,7 +16,7 @@ jobs:
       - checkout        
       - run:
           name: "Say Cheese"
-          command: "say cheese"
+          command: "echo Hello cheese"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
