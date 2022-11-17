@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "unit-test:build:production",
+            "firebaseProject": "meal-logger",
+            "firebaseHostingSite": "meal-logger"
+          }
         }
       }
     }

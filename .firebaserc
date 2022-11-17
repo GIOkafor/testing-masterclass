@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "meal-logger": {
+      "hosting": {
+        "unit-test": [
+          "meal-logger"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "meal-logger"
+  }
+}

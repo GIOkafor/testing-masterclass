@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand bg-light">
+    <div class="container-fluid d-flex">
+        <div>
+            <a class="navbar-brand pointer">
+                <i class="fa-solid fa-rocket"></i>
+                MyApp
+            </a>
+        </div>
+
+        <div id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link pointer" aria-current="page">Home</a>
+              </li>
+              <ng-template #showLogin>
+                <li class="nav-item">
+                    <a class="nav-link pointer login" (click)="login()">Login</a>
+                </li>
+              </ng-template>
+              
+              <li class="nav-item" *ngIf="loggedIn; else showLogin">
+                <a class="nav-link pointer logout" (click)="logout()">Logout</a>
+              </li>
+            </ul>
+        </div>
+    </div>
+</nav>
