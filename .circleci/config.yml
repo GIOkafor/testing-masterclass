@@ -21,11 +21,17 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
           
-  codecov-job:
+  build:
     docker:
-      # replace with your preferred image
-      - image: cimg/base:stable
+      - image: cimg/python:3.10
     steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: pip install -r requirements.txt
+      - run:
+          name: Run tests and collect coverage
+          command: pytest --cov app
       - codecov/upload
 
 # Invoke jobs via workflows
@@ -36,4 +42,4 @@ workflows:
       - say-hello
   codecov-workflow:
     jobs:
-      - codecov-job
+      - build
