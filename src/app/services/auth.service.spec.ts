@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
-import { of } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 import { AuthService } from './auth.service';
