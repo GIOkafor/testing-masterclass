@@ -23,16 +23,16 @@ jobs:
           
   build:
     docker:
-      - image: cimg/python:3.10
+      - image: circleci/node:10-browsers
     steps:
       - checkout
       - run:
-          name: Install dependencies
-          command: pip install -r requirements.txt
-      - run:
-          name: Run tests and collect coverage
-          command: pytest --cov app
-      - codecov/upload
+          name: install and run tests
+          command: |
+            yarn install && yarn test
+      - codecov/upload:
+          file: './coverage/clover.xml'
+          #token: a7a5df63-842c-4578-8977-57558e0ae2a3
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
