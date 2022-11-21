@@ -33,8 +33,7 @@ jobs:
       - run:
           name: Run tests and collect coverage
           command: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
-      - codecov/upload:
-        file: {{./coverage/}}
+      - codecov/upload
 
 workflow:
   version: 2.1
