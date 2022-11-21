@@ -5,7 +5,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/node:10-browsers
+      - image: cimg/node:current-browsers
     steps:
       - checkout
       - run:
