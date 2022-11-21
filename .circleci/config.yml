@@ -5,6 +5,7 @@ orbs:
 
 jobs:
   build:
+    working_directory: ~/unit-test
     docker:
       - image: cimg/node:current-browsers
     steps:
