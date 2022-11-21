@@ -16,6 +16,9 @@ jobs:
           command: npm run test
       - codecov/upload
 
+environment:
+  CHROME_BIN: /usr/local/bin/my-chrome-build
+
 workflow:
   version: 2.1
   build-test:
