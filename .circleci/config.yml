@@ -6,8 +6,6 @@ jobs:
   build:
     docker:
       - image: cimg/node:current
-    environment:
-      CHROME_BIN: /usr/local/bin/my-chrome-build
     steps:
       - checkout
       - run:
